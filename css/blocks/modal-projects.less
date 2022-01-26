@@ -1,0 +1,96 @@
+// main: ../style.less
+
+.modal-projects{
+    display: flex;
+}
+
+.modal-projects__preview{
+    width: 65%;
+    position: relative;
+    overflow: hidden;   
+
+}
+
+.modal-projects__img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    
+    transform: translate3d(-50%, -50%, 0);
+}
+
+.modal-projects__content{
+    width: 35%;
+    padding: 3.4rem 6.6rem 1rem 1.73rem;
+    position: relative;
+}
+
+.modal-projects__header{
+    margin-bottom: 2.2rem;
+}
+
+.modal-projects__title{
+    font-size: 2.12rem;
+    color: @black;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 0.2rem;
+}
+
+.modal-projects__info{
+    font-size: 1.2rem;
+    color: @gray;
+    text-transform: uppercase;
+}
+
+.modal-projects__info-divider{
+    margin: 0 1rem;
+}
+
+
+.modal-projects__text{
+    margin-bottom: 8.66rem;
+    font-size: 0.8rem;
+    line-height: 2;
+    color: @gray;
+    font-weight: 300;
+}
+
+.modal-projects__footer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    padding: 0 1.8rem 1rem;
+}
+
+.modal-projects__btn{
+    font-size: 0.94rem;
+    color: @blue;
+    text-transform: uppercase;
+    background: none;
+    font-family: inherit;
+    border: 0;
+    padding: .3rem;
+    cursor: pointer;
+    outline:none;
+    transition: font-size .2s linear, font-weight .2s linear;
+    
+    
+    &:hover{
+        font-size: 1.2rem;
+        font-weight: 9oo;
+    }
+
+
+    &--next {
+        padding: 0.32em 1.5em;
+    }
+    
+    
+}
+

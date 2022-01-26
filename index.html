@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,700;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/0.9.0rc1/jspdf.min.js"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Portfolio</title>
+  </head>
+
+  <body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <div class="user">
+            <div class="user__avatar">
+              <img src="images/avatar.png" alt="avatar" />
+            </div>
+            <div class="user__content">
+              <div class="user__name">Lilia<br />Grecova</div>
+              <div class="user__prof">Web Developer</div>
+            </div>
+          </div>
+          <nav class="nav" id="nav">
+            <a class="nav__link" href="#about">about me</a>
+            <a class="nav__link" href="#projects">projects</a>
+            <a class="nav__link" href="#news">blog</a>
+            <a class="nav__link" href="#" data-modal="#modal_contact"
+              >contact</a
+            >
+            <a
+              class="nav__link nav__link--btn"
+              href="#"
+              data-modal="#modal_contact"
+              >hire me</a
+            >
+          </nav>
+
+          <button class="menu" type="button" id="navToggle">
+            <img class="menu__icon" src="images/menu.svg" alt="" />
+          </button>
+        </div>
+      </div>
+    </header>
+    <!-- Intro -->
+    <section class="intro">
+      <div class="container">
+        <div class="intro__inner">
+          <div class="intro__content">
+            <h2 class="intro__subtitle">Hello I'am</h2>
+            <h1 class="intro__title">Lilia Grecova</h1>
+            <div class="intro__text">Web Developer</div>
+            <div class="intro__social">
+              <a
+                class="social__link"
+                href="https://linkedin.com/in/lilia-grecova-44647663"
+                target="_blank"
+              >
+                <img src="images/linkedin.jpg" alt="" />
+              </a>
+              <a class="social__link" href="#">
+                <img src="images/facebook.jpg" alt="" />
+              </a>
+              <a class="social__link" href="#">
+                <img src="images/telegram.jpg" alt="" />
+              </a>
+              <a class="social__link" href="#">
+                <img src="images/skype.jpg" alt="" />
+              </a>
+            </div>
+            <a class="btn" href="#" data-modal="#modal_contact">hire me</a>
+            <button class="btn" type="button" data-modal="#modal_resume">
+              my resume
+            </button>
+          </div>
+          <img src="images/intelligence.jpg" alt="" class="intro__photo" />
+        </div>
+        <!-- end intro__inner -->
+      </div>
+      <!--end container -->
+    </section>
+
+    <!-- Project -->
+    <div class="projects" id="projects">
+      <div class="container">
+        <div class="projects__nav">
+          <a href="#" class="projects__nav-link" data-filter="all">All</a>
+          <a href="#" class="projects__nav-link" data-filter="app">App</a>
+          <a href="#" class="projects__nav-link" data-filter="website"
+            >Website</a
+          >
+          <a href="#" class="projects__nav-link" data-filter="interaction"
+            >Interaction</a
+          >
+        </div>
+        <div class="portfolio">
+          <div class="portfolio__col" data-cat="website">
+            <div class="work" data-modal="#modal_project_1">
+              <img
+                class="work__image"
+                src="http://via.placeholder.com/370x300"
+                alt=""
+              />
+              <div class="work__content">
+                <div class="work__category">category:website</div>
+                <div class="work__title">
+                  Project title
+                  <time class="work__date" datetime="2020-11-10 20:00"
+                    >2020</time
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio__col" data-cat="website">
+            <div class="work" data-modal="#modal_project_2">
+              <img
+                class="work__image"
+                src="http://via.placeholder.com/370x300"
+                alt=""
+              />
+              <div class="work__content">
+                <div class="work__category">category:website</div>
+                <div class="work__title">
+                  Project title
+                  <time class="work__date" datetime="2020-11-10 20:00"
+                    >2020</time
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio__col" data-cat="interaction">
+            <div class="work">
+              <img
+                class="work__image"
+                src="http://via.placeholder.com/370x300"
+                alt=""
+              />
+              <div class="work__content">
+                <div class="work__category">category:interaction</div>
+                <div class="work__title">
+                  Project title
+                  <time class="work__date" datetime="2020-11-10 20:00"
+                    >2020</time
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="portfolio__col" data-cat="interaction">
+                    <div class="work">
+                        <img class="work__image" src="http://via.placeholder.com/370x300" alt="">
+                        <div class="work__content">
+                            <div class="work__category">category:interaction</div>
+                            <div class="work__title">
+                                Project title
+                                <time class="work__date" datetime="2020-11-10 20:00">2020</time>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio__col" data-cat="website">
+                    <div class="work">
+                        <img class="work__image" src="http://via.placeholder.com/370x300" alt="">
+                        <div class="work__content">
+                            <div class="work__category">category:website</div>
+                            <div class="work__title">
+                                Project title
+                                <time class="work__date" datetime="2020-11-10 20:00">2020</time>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio__col" data-cat="website">
+                    <div class="work">
+                        <img class="work__image" src="http://via.placeholder.com/370x300" alt="">
+                        <div class="work__content">
+                            <div class="work__category">category:website</div>
+                            <div class="work__title">
+                                Project title
+                                <time class="work__date" datetime="2020-11-10 20:00">2020</time>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+        </div>
+        <!--end portfolio -->
+        <!-- <div class="text-center">
+                <a href="#" class="btn btn--sm">load more projects</a>
+            </div> -->
+      </div>
+      <!--end container -->
+    </div>
+    <!--end projects-->
+
+    <section class="about" id="about">
+      <div class="container">
+        <div class="about__inner">
+          <div class="about__photo">
+            <img class="img" src="images/women.jpg" alt="" />
+          </div>
+          <div class="about__content">
+            <h3 class="about__title">About me</h3>
+            <h2 class="about__bigtitle">Who I am</h2>
+            <div class="about__text">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Urna
+                condimentum mattis pellentesque id. Massa enim nec dui nunc
+                mattis. Auctor eu augue ut lectus. Nec tinciis massa sed
+                elementum tempus egestas sed sed.
+              </p>
+              <p>
+                Pharetra convallis posuere mmalesuada pellentesque. Bibendum
+                enim facilisis gravida neque convallis a cras. Sagittis vitae et
+                leo duis. Metus dictum at tempor commodo ullamcorper a. Eget
+                nulla facilisi etiam dignissim diam quis enim.
+              </p>
+              <p>
+                Ultrices neque ornare aenean euismod elementum nisi quis
+                eleifend. Et tortor consequat id porta nibh venenatis. Justo
+                donec enim diam vulputate ut pharetra sit amet. Laoreet sit amet
+                cursus sit amet. Donec adipiscing tristique rs. Ut sem via.
+                Mauris a diam maecenas sed enim.
+              </p>
+            </div>
+            <a class="btn" href="#" data-modal="#modal_contact">hire me</a>
+            <button class="btn" type="button" data-modal="#modal_resume">
+              my resume
+            </button>
+          </div>
+          <!--end about__content-->
+        </div>
+        <!--end about__inner -->
+      </div>
+      <!--end container -->
+    </section>
+
+    <!-- News -->
+    <section class="news" id="news">
+      <div class="container">
+        <div class="news__header">
+          <h2 class="news__title">Recent posts</h2>
+        </div>
+        <div class="articles">
+          <div class="articles__col">
+            <div class="articles__item">
+              <div class="articles__header">
+                <time class="articles__date">10<br />June</time>
+                <a href="#">
+                  <img
+                    class="articles__img"
+                    src="http://via.placeholder.com/370x257"
+                    alt=""
+                  />
+                </a>
+              </div>
+              <div class="articles__content">
+                <h4 class="articles__title">
+                  <a href="#">The best smth in 2020</a>
+                </h4>
+                <div class="articles__category">Category</div>
+                <div class="articles__text">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Urna condimentum mattis pellentesque id. Massa enim
+                    nec dui nunc mattis. Auctor eu augue ut lectus. Nec tinciis
+                    massa sed elementum tempus egestas sed sed.
+                  </p>
+                </div>
+              </div>
+              <a href="" class="btn btn--sm">Read more</a>
+            </div>
+          </div>
+          <div class="articles__col">
+            <div class="articles__item">
+              <div class="articles__header">
+                <time class="articles__date">10<br />June</time>
+                <a href="#">
+                  <img
+                    class="articles__img"
+                    src="http://via.placeholder.com/370x257"
+                    alt=""
+                  />
+                </a>
+              </div>
+              <div class="articles__content">
+                <h4 class="articles__title">
+                  <a href="#">The best smth in 2020</a>
+                </h4>
+                <div class="articles__category">Category</div>
+                <div class="articles__text">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Urna condimentum mattis pellentesque id. Massa enim
+                    nec dui nunc mattis. Auctor eu augue ut lectus. Nec tinciis
+                    massa sed elementum tempus egestas sed sed.
+                  </p>
+                </div>
+              </div>
+              <a href="" class="btn btn--sm">Read more</a>
+            </div>
+          </div>
+          <!-- <div class="articles__col">
+                    <div class="articles__item">
+                        <div class="articles__header">
+                            <time class="articles__date">10<br>June</time>
+                            <a href="#">
+                                <img class="articles__img" src="http://via.placeholder.com/370x257" alt="">
+                            </a>
+                        </div>
+                        <div class="articles__content">
+                            <h4 class="articles__title">
+                                <a href="#">The best smth in 2020</a>
+                            </h4>
+                            <div class="articles__category">Category</div>
+                            <div class="articles__text">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Urna condimentum mattis pellentesque id. Massa enim nec dui nunc mattis. Auctor eu augue ut lectus.
+                                    Nec tinciis massa sed elementum tempus egestas sed sed.</p>
+                            </div>
+                        </div>
+                        <a href="" class="btn btn--sm">Read more</a>
+                    </div>
+                </div> -->
+        </div>
+        <!--end articles -->
+        <div class="news__footer">
+          <a class="news__link" href="#news">See more posts</a>
+        </div>
+      </div>
+      <!--end container -->
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <nav class="footer__nav">
+            <a href="#about" class="footer__nav-link">About</a>
+            <a href="#projects" class="footer__nav-link">Projects</a>
+            <a href="#news" class="footer__nav-link">Blog</a>
+            <a href="#" class="footer__nav-link" data-modal="#modal_contact"
+              >Contact</a
+            >
+            <a
+              href="#"
+              class="footer__nav-link footer__nav-link--btn"
+              data-modal="#modal_contact"
+              >Hire me</a
+            >
+          </nav>
+          <div class="footer__credits">
+            <div class="footer__social">
+              <a
+                href="https://linkedin.com/in/lilia-grecova-44647663"
+                target="_blank"
+              >
+                <img src="images/linkedin.svg" width="24" alt="" />
+              </a>
+              <a href="#" target="_blank">
+                <img src="images/facebook.svg" width="24" alt="" />
+              </a>
+              <a href="#" target="_blank">
+                <img src="images/telegram.svg" width="24" alt="" />
+              </a>
+              <a href="#" target="_blank">
+                <img src="images/skype.svg" width="24" alt="" />
+              </a>
+            </div>
+            <div class="footer__copyright">&copy;2020 Lili Grecova</div>
+          </div>
+        </div>
+        <!--end footer__inner -->
+      </div>
+      <!--end container -->
+    </footer>
+
+    <!-- Modals -->
+    <div class="modal" id="modal_project_1">
+      <div class="modal__dialog">
+        <button class="modal__close" type="button" data-close>
+          <img src="images/close.jpg" alt="Close" />
+        </button>
+        <div class="modal-projects">
+          <div class="modal-projects__preview">
+            <div data-slider="slick">
+              <div>
+                <img
+                  src="http://via.placeholder.com/790x780"
+                  alt=""
+                  class="modal-projects__img"
+                />
+              </div>
+              <div>
+                <img
+                  src="http://via.placeholder.com/790x780/333"
+                  alt=""
+                  class="modal-projects__img"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="modal-projects__content">
+            <div class="modal-projects__header">
+              <h3 class="modal-projects__title">Project title</h3>
+              <div class="modal-projects__info">
+                Category
+                <span class="modal-projects__info-divider">|</span> 2020
+              </div>
+            </div>
+            <div class="modal-projects__text">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Urna
+                condimentum mattis pellentesque id. Massa enim nec dui nunc
+                mattis. Auctor eu augue ut lectus. Nec tinciis massa sed
+                elementum tempus egestas sed sed.
+              </p>
+              <p>
+                Pharetra convallis posuere mmalesuada pellentesque. Bibendum
+                enim facilisis gravida neque convallis a cras. Sagittis vitae et
+                leo duis. Metus dictum at tempor commodo ullamcorper a. Eget
+                nulla facilisi etiam dignissim diam quis enim.
+              </p>
+            </div>
+            <div class="modal-projects__footer">
+              <button class="modal-projects__btn slickPrev" type="button">
+                <img src="images/left-arrow.svg" height="12px" alt="" />
+                Previous
+              </button>
+              <button class="modal-projects__btn slickNext" type="button">
+                Next
+                <img src="images/next.svg" height="12px" alt="" />
+              </button>
+            </div>
+          </div>
+          <!--end modal-projects__content -->
+        </div>
+        <!--end modal-projects -->
+      </div>
+      <!--end modal-dialog -->
+    </div>
+    <!--end modal -->
+
+    <div class="modal" id="modal_project_2">
+      <div class="modal__dialog">
+        <button class="modal__close" type="button" data-close>
+          <img src="images/close.jpg" alt="Close" />
+        </button>
+        <div class="modal-projects">
+          <div class="modal-projects__preview">
+            <div data-slider="slick">
+              <div>
+                <img
+                  src="http://via.placeholder.com/790x780"
+                  alt=""
+                  class="modal-projects__img"
+                />
+              </div>
+              <div>
+                <img
+                  src="http://via.placeholder.com/790x780/333"
+                  alt=""
+                  class="modal-projects__img"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="modal-projects__content">
+            <div class="modal-projects__header">
+              <h3 class="modal-projects__title">Project title 2</h3>
+              <div class="modal-projects__info">
+                Category
+                <span class="modal-projects__info-divider">|</span> 2020
+              </div>
+            </div>
+            <div class="modal-projects__text">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Urna
+                condimentum mattis pellentesque id. Massa enim nec dui nunc
+                mattis. Auctor eu augue ut lectus. Nec tinciis massa sed
+                elementum tempus egestas sed sed.
+              </p>
+              <p>
+                Pharetra convallis posuere mmalesuada pellentesque. Bibendum
+                enim facilisis gravida neque convallis a cras. Sagittis vitae et
+                leo duis. Metus dictum at tempor commodo ullamcorper a. Eget
+                nulla facilisi etiam dignissim diam quis enim.
+              </p>
+            </div>
+            <div class="modal-projects__footer">
+              <button class="modal-projects__btn slickPrev" type="button">
+                <img src="images/left-arrow.svg" height="12px" alt="" />
+                Previous
+              </button>
+              <button class="modal-projects__btn slickNext" type="button">
+                Next
+                <img src="images/next.svg" height="12px" alt="" />
+              </button>
+            </div>
+          </div>
+          <!--end modal-projects__content -->
+        </div>
+        <!--end modal-projects -->
+      </div>
+      <!--end modal-dialog -->
+    </div>
+    <!--end modal -->
+
+    <div class="modal" id="modal_resume">
+      <div class="modal__dialog">
+        <button class="modal__close" type="button" data-close>
+          <img src="images/close.jpg" alt="Close" />
+        </button>
+        <div class="modal__content">
+          <h3 class="modal__title text-center">RESUME</h3>
+
+          <div class="text-center">
+            <div id="download-btn"></div>
+            <!-- <button id="load">Download PDF File</button> -->
+            <a class="btn btn--thin" id="download" href="#">DOWNLOAD PDF</a>
+            <a class="btn btn--thin" onclick="display()" href="#">PRINT</a>
+          </div>
+          <div class="timeline" id="load">
+            <div class="timeline__col timeline__col--left">
+              <h4 class="timeline__title">MASTERED TECHNOLOGIES</h4>
+              <div class="timeline__item">
+                <h5 class="timeline__subtitle">Programming</h5>
+                <ul class="timeline__list">
+                  <li>JavaScript</li>
+                  <li>PHP</li>
+                  <li>Java</li>
+                  <li>C++</li>
+                  <li>HTML/CSS</li>
+                  <li>JQuery</li>
+                </ul>
+              </div>
+              <div class="timeline__item">
+                <h5 class="timeline__subtitle">Databases</h5>
+                <ul class="timeline__list">
+                  <li>MySQL</li>
+                </ul>
+              </div>
+              <div class="timeline__item">
+                <h5 class="timeline__subtitle">Frameworks</h5>
+                <ul class="timeline__list">
+                  <li>Laravel</li>
+                  <li>Wordpress</li>
+                  <li>Bootstrap</li>
+                  <li>Less</li>
+                  <li>Sass</li>
+                  <li>Scss</li>
+                </ul>
+              </div>
+              <div class="timeline__item">
+                <h5 class="timeline__subtitle">Operating Systems</h5>
+                <ul class="timeline__list">
+                  <li>Linux</li>
+                  <li>Windows</li>
+                </ul>
+              </div>
+              <div class="timeline__item">
+                <h5 class="timeline__subtitle">Other technologies</h5>
+                <ul class="timeline__list">
+                  <li>Git</li>
+                  <li>Docker</li>
+                </ul>
+              </div>
+            </div>
+            <div class="timeline__col timeline__col--right">
+              <h4 class="timeline__title">EDUCATION</h4>
+
+              <div class="timeline__item">
+                <time class="timeline__date" datetime="09/21/2021"
+                  >2017-2019</time
+                >
+                <h5 class="timeline__subtitle">Diploma Web Programming</h5>
+                <div class="timeline__position">
+                  Concordia University, Montreal, Canada
+                </div>
+              </div>
+              <div class="timeline__item">
+                <time class="timeline__date" datetime="09/21/2021"
+                  >2015-2016</time
+                >
+                <h5 class="timeline__subtitle">
+                  AEC, Accounting, Finance and Business administration
+                </h5>
+                <div class="timeline__position">
+                  College Rosemont, Montreal, Canada
+                </div>
+              </div>
+              <div class="timeline__item">
+                <time class="timeline__date" datetime="09/21/2021"
+                  >2007-2008</time
+                >
+                <h5 class="timeline__subtitle">
+                  Master's degree (Finance and Financial Management Services)
+                </h5>
+                <div class="timeline__position">
+                  Academy of Economic Studies of Moldova, Chisinau, Moldova
+                </div>
+              </div>
+              <div class="timeline__item">
+                <time class="timeline__date" datetime="09/21/2021"
+                  >2003-2007</time
+                >
+                <h5 class="timeline__subtitle">
+                  Bachelor in Economics (Banking, Corporate, Finance, and
+                  Securities Law)
+                </h5>
+                <div class="timeline__position">
+                  Academy of Economic Studies of Moldova, Chisinau, Moldova
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--end timeline -->
+          <div class="modal__content">
+            <h4 class="timeline__title text-center">Other trainings</h4>
+            <div class="timeline">
+              <div class="timeline__col timeline__col--left">
+                <div class="timeline__item">
+                  <time class="timeline__date" datetime="09/21/2021"
+                    >In progress</time
+                  >
+                  <h5 class="timeline__subtitle">Nodejs</h5>
+                  <div class="timeline__position">Udemy</div>
+                </div>
+                <div class="timeline__item">
+                  <time class="timeline__date" datetime="09/21/2021"
+                    >In progress</time
+                  >
+                  <h5 class="timeline__subtitle">React</h5>
+                  <div class="timeline__position">It Incubator</div>
+                </div>
+                <div class="timeline__item">
+                  <time class="timeline__date" datetime="09/21/2021"
+                    >In progress</time
+                  >
+                  <h5 class="timeline__subtitle">C++</h5>
+                  <div class="timeline__position">Udemy</div>
+                </div>
+                <div class="timeline__item">
+                  <time class="timeline__date" datetime="09/21/2021"
+                    >Up comming</time
+                  >
+                  <h5 class="timeline__subtitle">Vue js ...</h5>
+                  <div class="timeline__position"></div>
+                </div>
+              </div>
+              <div class="timeline__col timeline__col--right">
+                <div class="timeline__item">
+                  <time class="timeline__date" datetime="09/21/2021">2020</time>
+                  <h5 class="timeline__subtitle">
+                    Front-End Web UI Frameworks and tools: Bootstrap4
+                    (Certificate)
+                  </h5>
+                  <div class="timeline__position">
+                    Coursera, Hong Kong University
+                  </div>
+                </div>
+                <div class="timeline__item">
+                  <time class="timeline__date" datetime="09/21/2021">2019</time>
+                  <h5 class="timeline__subtitle">
+                    Advanced Styling with Responsive Design (Certificate)
+                  </h5>
+                  <div class="timeline__position">
+                    Coursera, University of Michigan
+                  </div>
+                </div>
+                <div class="timeline__item">
+                  <time class="timeline__date" datetime="09/21/2021">2019</time>
+                  <h5 class="timeline__subtitle">
+                    Interactivity with Javascript (Certificate)
+                  </h5>
+                  <div class="timeline__position">
+                    Coursera, University of Michigan
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="text-center">
+            <a
+              class="nav__link nav__link--btn"
+              href="#"
+              data-modal="#modal_contact"
+              >hire me</a
+            >
+          </div>
+        </div>
+        <!--end modal__content -->
+      </div>
+      <!--end modal-dialog -->
+    </div>
+    <!--end modal -->
+    <div class="modal" id="modal_contact">
+      <div class="modal__dialog modal__dialog--sm">
+        <button class="modal__close" type="button" data-close>
+          <img src="images/close.jpg" alt="Close" />
+        </button>
+        <div class="contact">
+          <div class="contact__left">
+            <h3 class="modal__title mb-0">Contact me</h3>
+            <ul class="contact__info">
+              <li class="contact__info-item">
+                <img class="contact__info-icon" src="images/phone.svg" alt="" />
+                (438) 931-3067
+              </li>
+              <li class="contact__info-item">
+                <img class="contact__info-icon" src="images/mail.svg" alt="" />
+                lili.grecova@gmail.com
+              </li>
+            </ul>
+
+            <form class="form" action="/" method="post">
+              <div class="form__group">
+                <label class="form__label" for="input-email">Email</label>
+                <input
+                  type="text"
+                  id="input-email"
+                  class="form__input"
+                  name=""
+                  placeholder="Email address"
+                />
+              </div>
+              <div class="form__group">
+                <label class="form__label" for="input-text">Message</label>
+                <textarea
+                  name="input-text"
+                  id="input-text"
+                  class="form__textarea"
+                  placeholder="Message..."
+                ></textarea>
+              </div>
+              <div class="text-right">
+                <button class="btn" type="submit">Send</button>
+              </div>
+            </form>
+          </div>
+          <!--end contact__left -->
+          <div class="contact__right">
+            <img src="images/thanks.png" alt="" class="intro__photo" />
+          </div>
+        </div>
+        <!--end contact -->
+      </div>
+      <!--end modal-dialog -->
+    </div>
+    <!--end modal -->
+
+    <!--JS-->
+    <script src="js/slick.min.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
